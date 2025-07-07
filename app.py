@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 import pdfplumber
 import os
 
+API_KEY = os.environ["API_KEY"]
+
 app = Flask(__name__)
 
 @app.route("/parse", methods=["POST"])
